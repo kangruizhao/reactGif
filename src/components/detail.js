@@ -14,6 +14,12 @@ if (nextProps.location !== this.props.location) {
   location.reload();
 }
 }
+componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.select!==prevProps.select){
+      this.props.searchAction(this.props.select.title,7);
+  }
+}
 check(id){
   var fl = JSON.parse(localStorage.getItem('flist'));
   if(fl===null){

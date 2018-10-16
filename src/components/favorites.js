@@ -8,10 +8,7 @@ class Favorites extends Component{
       this.props.fetchFavor();
 
     }
-  componentDidUpdate(nextProps) {
-    if(nextProps.gifs!==null&&nextProps.gifs.length===7)
-        location.reload();
-}
+
 
     render(){
       var outerstyle={
